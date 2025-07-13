@@ -1,0 +1,723 @@
+/* 기본 리셋 및 박스 크기 설정 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 본문 스타일 */
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
+
+  /* 고정된 헤더와 겹치지 않게 여백 확보 */
+}
+
+.container {
+  max-width: 1800px;
+  padding: 20px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* 상단 고정 헤더 스타일 */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 네비게이션 바 */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 30px 80px;
+  gap: 90px;
+  font-family: sans-serif;
+}
+
+.nav-item {
+  position: relative;
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+/* 상단 언어/소셜 바 */
+.top-bar {
+  background-color: #fff;
+  padding: 17px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 언어 선택 박스 */
+.language-select {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #fff;
+}
+
+/* 상단 우측 메뉴 (홈, 사이트맵 등) */
+.top-right {
+  display: flex;
+  gap: 15px;
+  color: #a0a0a0;
+  font-weight: 500;
+}
+
+/* 헤더 내부 컨테이너 */
+.container {
+  max-width: 1800px;
+  padding: 20px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 헤더 배경 및 텍스트 */
+header {
+  background: white;
+  color: #000;
+}
+
+/* 로고 스타일 */
+.logo {
+  margin-right: 50px;
+}
+
+.logo img {
+  height: 48px;
+  width: auto;
+}
+
+/* 내비게이션 스타일 */
+nav {
+  flex-grow: 1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+
+.nav-menu .dropdown {
+  position: relative;
+}
+
+.nav-menu .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.nav-menu .submenu li {
+  border-bottom: 1px solid #eee;
+}
+
+.nav-menu .submenu li a {
+  color: #000;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+}
+
+.nav-menu .submenu li a:hover {
+  background-color: #f6f6f6;
+}
+
+.nav-menu .dropdown:hover .submenu {
+  display: block;
+}
+
+/* 메인 배너 이미지 */
+.hero-image {
+  margin-top: 180px;
+  width: 100%;
+  display: block;
+}
+
+
+/* 제품 섹션 제목 스타일 */
+.products h2 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.products h2 .highlight {
+  color: #d60039;
+  border-bottom: 4px solid #d60039;
+  margin-bottom: 5px;
+}
+
+/* 부제목 */
+.subtitle {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* 개별 카드 디자인 - 높이만 다름 (0~3) */
+.product-card0,
+.product-card1,
+.product-card2,
+.product-card3 {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* 카드별 높이 지정 */
+.product-card0 {
+  height: 220px;
+}
+
+.product-card1 {
+  height: 430px;
+}
+
+.product-card2 {
+  height: 320px;
+}
+
+.product-card3 {
+  height: 470px;
+}
+
+/* 카드 안 이미지 스타일 */
+.product-card img {
+  width: 150%;
+  height: 120%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* 제품 섹션 전체 */
+.products {
+  max-width: 1380px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+.products h2 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.subtitle1 {
+  margin-bottom: 40px;
+  color: #555;
+  font-size: 16px;
+}
+
+/* 제품 리스트를 그리드로 구성 */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* 12칸 */
+  gap: 20px;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+/* 제품 소개 텍스트 박스 */
+.product-title {
+  grid-column: 1 / span 4;
+  grid-row: 1;
+  text-align: left;
+  align-self: center;
+}
+
+.product-title h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.product-title .highlight {
+  color: #d60039;
+  border-bottom: 4px solid #d60039;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.product-title .subtitle {
+  font-size: 15px;
+  color: #666;
+}
+
+/* 그리드 내 텍스트 블록 (좌측 상단 설명) */
+.text-block {
+  grid-column: 1 / 6;
+  grid-row: 1;
+  padding-bottom: 10px;
+}
+
+.text-block h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.text-block .highlight {
+  color: #d60039;
+  border-bottom: 4px solid #d60039;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.text-block .subtitle {
+  font-size: 15px;
+  color: #666;
+}
+
+/* 각 제품 카드 위치 지정 (12컬럼 그리드 기준) */
+.item1 {
+  grid-column: 1 / 5;
+  grid-row: 2;
+}
+
+.item2 {
+  grid-column: 5 / 13;
+  grid-row: 1 / 3;
+}
+
+.item3 {
+  grid-column: 1 / 5;
+  grid-row: 3;
+}
+
+.item4 {
+  grid-column: 5 / 10;
+  grid-row: 3;
+}
+
+.item5 {
+  grid-column: 10 / 13;
+  grid-row: 3;
+}
+
+/* 카드 오버레이 효과 (마우스 오버 시) */
+.item1,
+.item2,
+.item3,
+.item4,
+.item5 {
+  position: relative;
+}
+
+.item1 .overlay,
+.item2 .overlay,
+.item3 .overlay,
+.item4 .overlay,
+.item5 .overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background-color: rgba(214, 0, 57, 0.9);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.item1:hover .overlay,
+.item2:hover .overlay,
+.item3:hover .overlay,
+.item4:hover .overlay,
+.item5:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h4 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.overlay h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.overlay span {
+  font-size: 30px;
+}
+
+/* 반응형: 모바일 화면용 그리드 설정 */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .item1,
+  .item2,
+  .item3,
+  .item4,
+  .item5 {
+    grid-column: auto;
+    grid-row: auto;
+    height: auto;
+  }
+}
+
+/* 베스트 제품 섹션 제목 */
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+/* 베스트 제품 영역 */
+.best-products {
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 60px;
+  padding-bottom: 160px;
+  background-color: #f1f1f1;
+  clear: both;
+}
+
+/* 섹션 제목 */
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.section-title .highlight {
+  color: #d60039;
+  border-bottom: 4px solid #d60039;
+}
+
+/* 스크롤 가능한 제품 카드 영역 */
+.product-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 30px;
+  scroll-behavior: smooth;
+  padding: 40px 0;
+  cursor: grab;
+  box-sizing: border-box;
+}
+
+.product-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 560px;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* 이미지와 텍스트를 상하 배치 */
+}
+
+.product-scroll:active {
+  cursor: grabbing;
+}
+
+/* 카드 호버 시 살짝 올라가는 효과 */
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 카드 내부 이미지 */
+.product-card img {
+  width: 300px;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 18px 18px 0px 0px;
+}
+
+/* 제품 정보 텍스트 */
+.product-info p {
+  color: #000;
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: Montserrat;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+/* 프리미엄 배지 */
+.premium-badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 40px;
+  background-color: #f1f1f1;
+  color: #a0a0a0;
+  font-weight: 600;
+  border-radius: 25px;
+  font-size: 16px;
+  border: 2px solid #a0a0a0;
+  width: 180px;
+  letter-spacing: -0.4px;
+}
+
+/* 카테고리 텍스트 (작은 회색 글자) */
+.product-info h5 {
+  display: flex;
+  width: auto;
+  height: 50px;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #B3B3B3;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 0;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.product-info {
+  padding: 20px 30px 30px;
+  /* 패딩 위쪽을 줘서 텍스트 올라오게 */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  /* 요소 간 간격 */
+}
+
+.scroll-guide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 420px;
+  margin-top: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  border-top: 1px dashed #ccc;
+  padding-top: -100px;
+  width: 100%;
+}
+
+.scroll-guide .text {
+  font-size: 14px;
+  color: #aaa;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+}
+
+.arrow-img {
+  width: 18px;
+  height: 18px;
+  opacity: 0.6;
+}
+
+.scroll-guide .drag-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+  transform: translateY(2px);
+}
+
+.hero-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+.news-inquiry-store {
+  display: flex;
+  border-top: 5px solid #a30000;
+  padding: 40px;
+  gap: 20px;
+}
+
+.news {
+  flex: 2;
+}
+
+.news h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.news-main {
+  display: flex;
+  gap: 15px;
+}
+
+.news-main img {
+  width: 200px;
+  height: auto;
+}
+
+.news-content h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.news-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+.news-content .date {
+  font-size: 12px;
+  color: gray;
+}
+
+.news-list {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.news-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.inquiry,
+.brandstore {
+  flex: 1;
+  text-align: center;
+  border-left: 1px solid #eee;
+  padding-left: 20px;
+}
+
+.inquiry img {
+  width: 50px;
+  margin-bottom: 10px;
+  color: #DDD;
+
+}
+
+.brandstore img {
+  width: 50px;
+  margin-bottom: 10px;
+  color: #DDD;
+}
+
+.inquiry h3,
+.brandstore h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.inquiry p,
+.brandstore p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: 2px solid #c00;
+  background: none;
+  color: #c00;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+footer {
+  background: #1a1a1a;
+  color: #ccc;
+  padding: 40px;
+  font-size: 14px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.customer button {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
