@@ -132,13 +132,10 @@ nav ul {
 nav ul li a {
   color: #000;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 1px;
 }
 
-.nav-menu {
-  font-size: 9px;
-}
 
 
 .nav-menu .dropdown {
