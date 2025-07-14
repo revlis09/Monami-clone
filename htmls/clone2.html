@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>모나미 FX ZETA</title>
-  <link rel="stylesheet" href="클론2.css" />
+  <link rel="stylesheet" href="clone2.css" />
 </head>
 
 <body>
@@ -14,13 +14,13 @@
       <div class="top-bar">
         <div class="top-left">
           <div class="language-select">
-            <img src="../사진/태극기.png" alt="KOR" width="20" /> KOR ▾
+            <img src="../images/태극기.png" alt="KOR" width="20" /> KOR ▾
           </div>
           <div class="social-icons">
-            <a href="https://www.facebook.com/monami1960"><img src="../사진/facebook.png" alt="Facebook" /></a>
-            <a href="https://www.instagram.com/monami_official/?source=omni_redirect"><img src="../사진/instagram.png"
+            <a href="https://www.facebook.com/monami1960"><img src="../images/facebook.png" alt="Facebook" /></a>
+            <a href="https://www.instagram.com/monami_official/?source=omni_redirect"><img src="../images/instagram.png"
                 alt="Instagram" /></a>
-            <a href="https://www.youtube.com/channel/UC7lJDw-5bYXnAGNHh1uUG3A"><img src="../사진/youtube1.png"
+            <a href="https://www.youtube.com/channel/UC7lJDw-5bYXnAGNHh1uUG3A"><img src="../images/youtube1.png"
                 alt="YouTube" /></a>
           </div>
         </div>
@@ -31,7 +31,7 @@
       <hr />
       <div class="container">
         <h1 class="logo">
-          <img src="../사진/logo.jpg" alt="모나미 로고" />
+          <img src="../images/logo.jpg" alt="모나미 로고" />
         </h1>
         <nav>
           <ul class="nav-menu">
@@ -53,13 +53,13 @@
             <li><a href="#">모나미 미술대회</a></li>
             <li><a href="#">고객지원</a></li>
             <li><a href="#">기업 구매 / 개발</a></li>
-            <li><a href="#"><img src="../사진/search1.png" alt="검색" style="height: 18px;" /></a></li>
-            <li><a href="#"><img src="../사진/menu.jpg" alt="메뉴" style="height: 22px;" /></a></li>
+            <li><a href="#"><img src="../images/search1.png" alt="검색" style="height: 18px;" /></a></li>
+            <li><a href="#"><img src="../images/menu.jpg" alt="메뉴" style="height: 22px;" /></a></li>
           </ul>
         </nav>
       </div>
     </div>
-    <img src="../사진/모나미제품.png" width="100%" />
+    <img src="../images/모나미제품.png" width="100%" />
     <div class="category-bar">
       <button class="category active">프리미엄 펜</button>
       <button class="category">펜·펜슬</button>
@@ -75,12 +75,15 @@
     <h1><span class="black">PRODUCT</span> <span class="red">INFO</span></h1>
     <div class="info-container">
       <div class="product-left-area">
-        <img id="main-image" src="../사진/pen0.png" alt="FX ZETA C3" />
+        <img id="main-image" src="../images/newpen.png" alt="FX ZETA C3" />
         <div class="thumbnail-slider">
           <button class="arrow left" onclick="slide(-1)">‹</button>
           <div class="thumbnails" id="thumbnail-list">
-            <img src="../사진/pen0.png" alt="Pink" onclick="changeImage(this.src)" />
-            <img src="../사진/brownpen.png" alt="Yellow" onclick="changeImage(this.src)" />
+            <img src="../images/pinkpen.png" alt="Pink" onclick="changeImage(this.src)" />
+            <img src="../images/yellow.png" alt="Yellow" onclick="changeImage(this.src)" />
+            <img src="../images/bluepen.png" alt="Blue" onclick="changeImage(this.src)" />
+            <img src="../images/greenpen.png" alt="Green" onclick="changeImage(this.src)" />
+            <img src="../images/brown.png" alt="Brown" onclick="changeImage(this.src)" />
           </div>
           <button class="arrow right" onclick="slide(1)">›</button>
         </div>
@@ -88,46 +91,48 @@
 
       <div class="product-right">
         <div class="product-title-area">
-          <h2 class="product-name">프러스펜 3000 프라임</h2>
+          <h2 class="product-name">FX ZETA C3</h2>
           <div class="product-line"></div>
-          <p class="product-category">프리미엄 펜</p>
+          <p class="product-category">유성볼펜</p>
         </div>
 
 
         <h3 class="info-title">■ KEY FEATURES</h3>
         <ul class="features">
-          <li>프러스펜 3000(수성) 디자인을 재해석해 탄생한 프리미엄 유성 볼펜</li>
-          <li>금속 재질을 적용하여 모던하고 고급스러움을 강조한 디자인</li>
-          <li>헤어라인 후가공 공법을 적용하여 자연스러운 질감 표현</li>
-          <li>0.7mm 필기선, FX 4000 고급 리필심 내장</li>
+          <li>미끄러움을 방지하고 편안한 그립감을 제공하는 패턴 그립</li>
+          <li>실리콘 파트 구조를 적용하여 노크 소음을 최소화한 디자인</li>
+          <li>유격을 최소화하여 흔들림 없이 안정감 있는 필기감 제공</li>
         </ul>
 
 
-        <h3 class="info-title">■ INK COLOR</h3>
-        <div class="ink-colors">
-          <div class="color-box black">Black</div>
+        <h3 class="info-title">■ BODY COLOR</h3>
+        <div class="body-colors">
+          <div class="color-box" style="background:#f4c972;"></div>
+          <div class="color-box" style="background:#84b2d7;"></div>
+          <div class="color-box" style="background:#e2a7ba;"></div>
+          <div class="color-box" style="background:#b6bdee;"></div>
+          <div class="color-box" style="background:#504425;"></div>
+          <div class="color-box" style="background:#92c88d;"></div>
+          <div class="color-box" style="background:rgb(2, 104, 15)"></div>
+          <div class="color-box" style="background:#33018a;"></div>
+          <div class="color-box" style="background:#8b7d7dba;"></div>
         </div>
 
-        <h3 class="info-title">■ BODY COLOR</h3>
-        <div class="ink-colors">
-          <div class="color-box Silver">Silver</div>
-          <div class="color-box AshGrey">Ash Grey</div>
-        </div>
         <div class="extra-info">
           <h3>■ POINT SIZE</h3>
-          <p>0.7mm</p>
-        </div>
+          <p>0.5mm / 0.7mm</p>
 
+          <h3>■ NIB/TIB TYPE</h3>
+          <img src="../images/펜촉.png" alt="닙 타입 아이콘" style="height:40px;" />
 
-
-        <h3>■ DOWNLOAD</h3>
-        <div class="download-buttons">
-
-          <button>제품상세</button>
-          <button>이미지</button>
+          <h3>■ DOWNLOAD</h3>
+          <div class="download-buttons">
+            <button>셀시트</button>
+            <button>제품상세</button>
+            <button>이미지</button>
+          </div>
         </div>
       </div>
-    </div>
     </div>
 
     <div class="go-top-btn">↑</div>
@@ -142,7 +147,7 @@
     <p>© MONAMI. All rights reserved.</p>
   </footer>
 
-  <script src="클론2.js"></script>
+  <script src="clone2.js"></script>
 </body>
 
 </html>
