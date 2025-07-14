@@ -136,6 +136,10 @@ nav ul li a {
   letter-spacing: 1px;
 }
 
+.nav-menu {
+  font-size: 9px;
+}
+
 
 .nav-menu .dropdown {
   position: relative;
