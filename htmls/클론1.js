@@ -36,7 +36,8 @@ const observer = new IntersectionObserver((entries) => {
       video.play();
       video.muted = false; // 보이면 소리 켬
     } else {
-      video.muted = true;  // 안 보이면 소리 끔
+      video.pause();       // 화면에서 안 보이면 정지
+      video.muted = true;  // 음소거
     }
   });
 }, {
