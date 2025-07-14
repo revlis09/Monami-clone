@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>모나미 FX ZETA</title>
+  <link rel="stylesheet" href="클론2.css" />
+</head>
+
+<body>
+  <header>
+    <div class="fixed-header">
+      <div class="top-bar">
+        <div class="top-left">
+          <div class="language-select">
+            <img src="태극기.png" alt="KOR" width="20" /> KOR ▾
+          </div>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/monami1960"><img src="facebook.png" alt="Facebook" /></a>
+            <a href="https://www.instagram.com/monami_official/?source=omni_redirect"><img src="instagram.png"
+                alt="Instagram" /></a>
+            <a href="https://www.youtube.com/channel/UC7lJDw-5bYXnAGNHh1uUG3A"><img src="youtube1.png"
+                alt="YouTube" /></a>
+          </div>
+        </div>
+        <div class="top-right">
+          <span>HOME</span> <span>|</span> <span>SITE MAP</span> <span>|</span> <span>CONTACT US</span>
+        </div>
+      </div>
+      <hr />
+      <div class="container">
+        <h1 class="logo">
+          <img src="logo.jpg" alt="모나미 로고" />
+        </h1>
+        <nav>
+          <ul class="nav-menu">
+            <li class="dropdown"><a href="#">모나미소개</a>
+              <ul class="submenu">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">CEO 인사말</a></li>
+                <li><a href="#">연혁</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="#">모나미제품</a>
+              <ul class="submenu">
+                <li><a href="#">펜/펜슬</a></li>
+                <li><a href="#">마카/컬러링</a></li>
+                <li><a href="#">노트/사무용품</a></li>
+              </ul>
+            </li>
+            <li><a href="#">NEWS & VIDEO</a></li>
+            <li><a href="#">모나미 미술대회</a></li>
+            <li><a href="#">고객지원</a></li>
+            <li><a href="#">기업 구매 / 개발</a></li>
+            <li><a href="#"><img src="search1.png" alt="검색" style="height: 18px;" /></a></li>
+            <li><a href="#"><img src="menu.jpg" alt="메뉴" style="height: 22px;" /></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <img src="모나미제품.png" width="100%" />
+    <div class="category-bar">
+      <button class="category active">프리미엄 펜</button>
+      <button class="category">펜·펜슬</button>
+      <button class="category">마카·컬러링</button>
+      <button class="category">노트·사무용품</button>
+      <button class="category">잉크·리필</button>
+      <button class="category">카탈로그</button>
+    </div>
+    </div>
+  </header>
+
+  <section class="product-info-section">
+    <h1><span class="black">PRODUCT</span> <span class="red">INFO</span></h1>
+    <div class="info-container">
+      <div class="product-left-area">
+        <img id="main-image" src="pen0.png" alt="FX ZETA C3" />
+        <div class="thumbnail-slider">
+          <button class="arrow left" onclick="slide(-1)">‹</button>
+          <div class="thumbnails" id="thumbnail-list">
+            <img src="pen0.png" alt="Pink" onclick="changeImage(this.src)" />
+            <img src="brownpen.png" alt="Yellow" onclick="changeImage(this.src)" />
+          </div>
+          <button class="arrow right" onclick="slide(1)">›</button>
+        </div>
+      </div>
+
+      <div class="product-right">
+        <div class="product-title-area">
+          <h2 class="product-name">프러스펜 3000 프라임</h2>
+          <div class="product-line"></div>
+          <p class="product-category">프리미엄 펜</p>
+        </div>
+
+
+        <h3 class="info-title">■ KEY FEATURES</h3>
+        <ul class="features">
+          <li>프러스펜 3000(수성) 디자인을 재해석해 탄생한 프리미엄 유성 볼펜</li>
+          <li>금속 재질을 적용하여 모던하고 고급스러움을 강조한 디자인</li>
+          <li>헤어라인 후가공 공법을 적용하여 자연스러운 질감 표현</li>
+          <li>0.7mm 필기선, FX 4000 고급 리필심 내장</li>
+        </ul>
+
+
+        <h3 class="info-title">■ INK COLOR</h3>
+        <div class="ink-colors">
+          <div class="color-box black">Black</div>
+        </div>
+
+        <h3 class="info-title">■ BODY COLOR</h3>
+        <div class="ink-colors">
+          <div class="color-box Silver">Silver</div>
+          <div class="color-box AshGrey">Ash Grey</div>
+        </div>
+        <div class="extra-info">
+          <h3>■ POINT SIZE</h3>
+          <p>0.7mm</p>
+        </div>
+
+
+
+        <h3>■ DOWNLOAD</h3>
+        <div class="download-buttons">
+
+          <button>제품상세</button>
+          <button>이미지</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="go-top-btn">↑</div>
+    <section class="product-extra">
+      <div class="list-btn">
+        <button>LIST</button>
+      </div>
+    </section>
+  </section>
+
+  <footer>
+    <p>© MONAMI. All rights reserved.</p>
+  </footer>
+
+  <script src="클론2.js"></script>
+</body>
+
+</html>

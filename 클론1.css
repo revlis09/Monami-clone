@@ -15,6 +15,10 @@ body {
   /* 고정된 헤더와 겹치지 않게 여백 확보 */
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1800px;
   padding: 20px 35px;
