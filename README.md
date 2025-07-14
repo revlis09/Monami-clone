@@ -1,1 +1,0 @@
-Monami-clone pages
