@@ -27,21 +27,20 @@ scrollContainer.addEventListener('mousemove', (e) => {
   scrollContainer.scrollLeft = scrollLeft - walk;
 });
 
+
 const video = document.getElementById('mainVideo');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      if (video.paused) video.play();
-      video.muted = false;
+      video.play();
+      video.muted = false; // 보이면 소리 켬
     } else {
-      video.pause();
-      video.muted = true;
+      video.muted = true;  // 안 보이면 소리 끔
     }
   });
 }, {
-  threshold: 0.5,
+  threshold: 0.5, // 화면에 절반 이상 보여야 "보임"으로 간주
 });
 
 observer.observe(video);
-
