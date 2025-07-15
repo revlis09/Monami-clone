@@ -406,23 +406,8 @@ nav ul li a {
   font-size: 30px;
 }
 
-/* 반응형: 모바일 화면용 그리드 설정 */
-@media (max-width: 768px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-  }
 
-  .item1,
-  .item2,
-  .item3,
-  .item4,
-  .item5 {
-    grid-column: auto;
-    grid-row: auto;
-    height: auto;
-  }
-}
+
 
 /* 베스트 제품 섹션 제목 */
 .title {
@@ -484,7 +469,7 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* 이미지와 텍스트를 상하 배치 */
+  gap: 2px;
 }
 
 .product-scroll:active {
