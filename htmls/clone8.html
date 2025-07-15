@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>monami</title>
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="clone2.css" />
+</head>
+
+<body>
+  <header>
+    <div class="fixed-header">
+      <div class="top-bar">
+        <div class="top-left">
+          <div class="language-select">
+            <img src="../images/태극기.png" alt="KOR" width="20" /> KOR ▾
+          </div>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/monami1960"><img src="../images/facebook.png" alt="Facebook" /></a>
+            <a href="https://www.instagram.com/monami_official/?source=omni_redirect"><img src="../images/instagram.png"
+                alt="Instagram" /></a>
+            <a href="https://www.youtube.com/channel/UC7lJDw-5bYXnAGNHh1uUG3A"><img src="../images/youtube1.png"
+                alt="YouTube" /></a>
+          </div>
+        </div>
+        <div class="top-right">
+          <span>HOME</span> <span>|</span> <span>SITE MAP</span> <span>|</span> <span>CONTACT US</span>
+        </div>
+      </div>
+      <hr />
+      <div class="container">
+        <h1 class="logo">
+          <img src="../images/logo.jpg" alt="모나미 로고" />
+        </h1>
+        <nav>
+          <ul class="nav-menu">
+            <li class="dropdown"><a href="#">모나미소개</a>
+              <ul class="submenu">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">CEO 인사말</a></li>
+                <li><a href="#">연혁</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="#">모나미제품</a>
+              <ul class="submenu">
+                <li><a href="#">펜/펜슬</a></li>
+                <li><a href="#">마카/컬러링</a></li>
+                <li><a href="#">노트/사무용품</a></li>
+              </ul>
+            </li>
+            <li><a href="#">NEWS & VIDEO</a></li>
+            <li><a href="#">모나미 미술대회</a></li>
+            <li><a href="#">고객지원</a></li>
+            <li><a href="#">기업 구매 / 개발</a></li>
+            <li><a href="#"><img src="../images/search1.png" alt="검색" style="height: 18px;" /></a></li>
+            <li><a href="#"><img src="../images/menu.jpg" alt="메뉴" style="height: 22px;" /></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <img src="../images/모나미제품.png" width="100%" />
+    <div class="category-bar">
+      <button class="category active">프리미엄 펜</button>
+      <button class="category">펜·펜슬</button>
+      <button class="category">마카·컬러링</button>
+      <button class="category">노트·사무용품</button>
+      <button class="category">잉크·리필</button>
+      <button class="category">카탈로그</button>
+    </div>
+    </div>
+  </header>
+
+  <section class="product-info-section">
+    <h1><span class="black">PRODUCT</span> <span class="red">INFO</span></h1>
+    <div class="info-container">
+      <div class="product-left-area">
+        <img id="main-image" src="../images/blackpen.png" alt="FX ZETA C3" />
+        <div class="thumbnail-slider">
+          <button class="arrow left" onclick="slide(-1)">‹</button>
+          <div class="thumbnails" id="thumbnail-list">
+            <img src="../images/blackpen.png" alt="pen" onclick="changeImage(this.src)" />
+            <img src="../images/babypink.png" alt="pen" onclick="changeImage(this.src)" />
+            <img src="../images/green.png" alt="pen" onclick="changeImage(this.src)" />
+            <img src="../images/베이지.png" alt="pen" onclick="changeImage(this.src)" />
+          </div>
+          <button class="arrow right" onclick="slide(1)">›</button>
+        </div>
+      </div>
+
+      <div class="product-right">
+        <div class="product-title-area">
+          <h2 class="product-name">153 네오 만년필 EF</h2>
+          <div class="product-line"></div>
+          <p class="product-category">만년필</p>
+        </div>
+
+        <h3 class="info-title">■ KEY FEATURES</h3>
+        <ul class="features">
+          <li>가늘고 깨끗한 필기가 가능한 EF촉</li>
+          <li>일반 만년필 대비 짧은 배럴과 금속 클립으로 휴대성 강화</li>
+          <li>다양한 색상의 모나미 병잉크 및 잉크카트리지 사용 가능</li>
+        </ul>
+
+        <h3 class="info-title">■ INK COLOR</h3>
+        <div class="body-colors">
+          <div class="color-box" style="background:#000000;"></div>
+        </div>
+
+        <h3 class="info-title">■ BODY COLOR</h3>
+        <div class="ink-colors">
+          <div class="color-box black">BLACK</div>
+          <div class="color-box coral">CORAL</div>
+          <div class="color-box beige">BEIGE</div>
+          <div class="color-box khaki">KHAKI</div>
+        </div>
+
+        <div class="extra-info">
+          <h3>■ POINT SIZE</h3>
+          <p>EP</p>
+        </div>
+
+
+
+        <h3>■ DOWNLOAD</h3>
+        <div class="download-buttons">
+          <button>셀시트</button>
+          <button>제품상세</button>
+          <button>이미지</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="go-top-btn">↑</div>
+    <section class="product-extra">
+      <div class="list-btn">
+        <button>LIST</button>
+      </div>
+    </section>
+  </section>
+
+  <footer>
+    <p>© MONAMI. All rights reserved.</p>
+  </footer>
+
+  <script src="clone2.js"></script>
+</body>
+
+</html>

@@ -293,6 +293,26 @@ h3 {
   background: rgb(149, 170, 233);
 }
 
+.color-box.navy {
+  background: navy;
+}
+
+.color-box.coral {
+  background: rgb(246, 164, 178);
+}
+
+.color-box.beige {
+  background: beige;
+}
+
+.color-box.beige {
+  background: white;
+}
+
+.color-box.khaki {
+  background: rgb(94, 136, 100);
+}
+
 .body-colors {
   display: flex;
   gap: 3px;
@@ -555,4 +575,17 @@ h4 {
   font-size: 18px;
   color: #666;
   margin: 0;
+}
+
+.how {
+  display: flex;
+  justify-content: center;
+  /* 수평 중앙 정렬 */
+  margin-top: 50px;
+  /* 위와의 간격 */
+}
+
+.how img {
+  max-width: 100%;
+  height: auto;
 }
