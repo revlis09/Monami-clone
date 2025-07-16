@@ -113,9 +113,6 @@ nav ul.nav-menu {
   gap: 80px;
   justify-content: center;
   align-items: center;
-  /* nav-menu 자체는 relative로 두지 않습니다.
-     드롭다운 컨테이너가 fixed-header 내에서 위치를 잡고,
-     호버 이벤트를 fixed-header 또는 nav에 직접 걸어서 제어합니다. */
 }
 
 /* 메인 메뉴 링크 기본 스타일 */
@@ -150,7 +147,7 @@ nav ul.nav-menu {
   width: 0;
   /* 초기 너비 0 */
   height: 3px;
-  background: #c6093b;
+
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -158,7 +155,7 @@ nav ul.nav-menu {
   transition: width 0.3s ease;
 }
 
-/* !!! 중요한 변경 !!! fixed-header에 마우스 호버 시 모든 드롭다운 항목의 밑줄이 확장 */
+/* fixed-header에 마우스 호버 시 모든 드롭다운 항목의 밑줄이 확장 */
 .fixed-header:hover .nav-menu .dropdown>a::after {
   width: 100%;
 }
@@ -166,7 +163,7 @@ nav ul.nav-menu {
 
 /* --- 서브메뉴 전체를 감싸는 컨테이너 (실제 드롭다운 영역) --- */
 .submenu-container {
-  /* 페이지 로드 시 숨김 및 호버 시 나타나기 위한 기본 설정 */
+  /* !!! 이 부분이 핵심입니다: 페이지 로드 시에는 숨김 */
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -174,32 +171,35 @@ nav ul.nav-menu {
   /* 드롭다운 메뉴의 고정된 위치 */
   position: fixed;
   /* 뷰포트에 고정 */
-  top: 170px;
-  /* 헤더 높이(top-bar + nav)에 맞춰 조절. 정확한 값은 브라우저에서 측정 권장. */
+  /* top 값은 브라우저 개발자 도구로 헤더의 실제 높이를 측정하여 정확히 설정하는 것이 가장 좋습니다. */
+  /* top-bar (17px*2패딩 + 1px보더) + container (20px*2패딩 + 48px로고) = 35 + 88 = 123px (대략적인 헤더 높이) */
+  top: 165px;
+  /* 헤더 높이에 맞춰 조절. 브라우저에서 측정 권장. */
   left: 0;
   /* 뷰포트 왼쪽 끝 */
   width: 100vw;
   /* 뷰포트 전체 너비 */
   background-color: white;
+  /* 배경색을 흰색으로 지정하여 아래 콘텐츠가 비치지 않도록 함 */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   /* 그림자 더 강하게 */
-  padding: 30px 80px;
+  padding: 30px 0px;
   /* 내부 여백 */
   z-index: 990;
-  /* 헤더보다 아래, 콘텐츠보다는 위에 */
+  /* 헤더보다 아래 (1000보다 작음), 일반 콘텐츠보다 위에 */
   border-top: 3px solid #c6093b;
 
   display: flex;
   /* 내부 서브메뉴 열 정렬 */
   justify-content: center;
   /* 서브메뉴 열들을 가운데 정렬 */
-  gap: 60px;
+  gap: 36px;
   /* 각 서브메뉴 열(ul.submenu) 간의 간격 */
   flex-wrap: nowrap;
   /* 서브메뉴 열들이 줄바꿈되지 않도록 */
 }
 
-/* !!! 중요한 변경 !!! fixed-header에 마우스 호버 시 모든 submenu-container를 보이게 합니다. */
+/* fixed-header에 마우스 호버 시 모든 submenu-container를 보이게 합니다. */
 .fixed-header:hover .submenu-container {
   opacity: 1;
   visibility: visible;
@@ -272,9 +272,9 @@ nav ul.nav-menu {
 /* --- 메인 배너 이미지 --- */
 .hero-image {
   /* fixed-header의 높이만큼 margin-top을 주어 콘텐츠가 헤더 아래에서 시작하도록 합니다. */
-  /* fixed-header 높이 (top-bar + nav-menu)를 대략적으로 계산하여 170px로 설정.
-     정확한 값은 브라우저 개발자 도구로 측정 후 조절하는 것이 가장 좋습니다. */
-  margin-top: 170px;
+  /* top-bar와 nav-menu 높이의 합계에 맞춰줍니다. */
+  margin-top: 123px;
+  /* submenu-container의 top 값과 동일하게 맞춰줌 */
   width: 100%;
   height: auto;
   display: block;
@@ -422,10 +422,10 @@ nav ul.nav-menu {
 .item4 .overlay,
 .item5 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
   background-color: rgba(214, 0, 57, 0.9);
   color: white;
   display: flex;

@@ -71,3 +71,21 @@ function resetCartCount() {
   }
 }
 // --- 장바구니 관련 수정 부분 끝 ---
+
+// clone2.js 파일의 DOMContentLoaded 이벤트 리스너 안에 추가
+document.addEventListener('DOMContentLoaded', () => {
+  // ... (기존 드롭다운 메뉴 관련 코드 및 스크롤 코드) ...
+
+  const closeButton = document.querySelector('.brand-store-floating-button .close-button');
+  const floatingButton = document.querySelector('.brand-store-floating-button');
+
+  if (closeButton && floatingButton) {
+    closeButton.addEventListener('click', (event) => {
+      event.preventDefault(); // 링크 클릭 방지
+      event.stopPropagation(); // 부모 요소로의 이벤트 전파 방지 (링크 클릭 방지)
+      floatingButton.style.display = 'none'; // 버튼 숨김
+      // 만약 부드럽게 사라지게 하고 싶다면, CSS에서 opacity/visibility를 사용하고 여기서는 클래스를 토글하는 방식으로 변경할 수 있습니다.
+      // 예: floatingButton.classList.add('hidden');
+    });
+  }
+});

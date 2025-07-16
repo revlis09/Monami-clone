@@ -1,10 +1,10 @@
-/* 초기화 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800&family=Montserrat:wght@400;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 
 .fixed-header {
   position: fixed;
@@ -16,16 +16,11 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
-
 body {
   font-family: 'Noto Sans KR', sans-serif;
   color: #333;
   background: #fff;
   padding-top: 230px;
-
-
-
 }
 
 main-image {
@@ -33,7 +28,6 @@ main-image {
   height: 400px;
   object-fit: contain;
 }
-
 
 h1 {
   text-align: center;
@@ -48,7 +42,6 @@ h1 .black {
 h1 .red {
   color: #c30e3d;
 }
-
 
 /* 상단바 */
 .top-bar {
@@ -79,14 +72,8 @@ h1 .red {
   align-items: center;
   padding: 15px 20px;
   background-color: #fff;
-
   max-height: 100px;
-  /* 원하는 높이로 제한 */
   overflow: hidden;
-  /* 넘치는 부분 숨기기 */
-
-
-
 }
 
 .logo {
@@ -101,14 +88,10 @@ h1 .red {
 
 .logo a {
   text-decoration: none;
-  /* 밑줄 제거 */
   color: inherit;
-  /* 부모 요소의 색상 상속 (여기서는 이미지라 크게 상관 없음) */
   display: block;
-  /* a 태그가 이미지 크기만큼 클릭 영역을 가지도록 함 */
 }
 
-/* 추가적으로 로고 이미지 자체에 마우스 오버 시 커서 모양을 pointer로 변경하여 클릭 가능함을 나타낼 수 있습니다. */
 .logo img {
   cursor: pointer;
 }
@@ -216,12 +199,10 @@ h1 .red {
 }
 
 /* 탭 버튼 */
-
 .product-info-section {
   padding: 60px 80px;
   background: #f2f2f2;
 }
-
 
 .info-container {
   display: flex;
@@ -272,10 +253,7 @@ h3 {
   text-align: center;
   font-weight: bold;
   line-height: 60px;
-  /* 높이랑 동일하게 */
   font-size: 14px;
-
-
 }
 
 .color-box.black {
@@ -326,7 +304,7 @@ h3 {
   background: beige;
 }
 
-.color-box.beige {
+.color-box.white {
   background: white;
 }
 
@@ -402,7 +380,6 @@ h4 {
   gap: 10px;
 }
 
-
 .thumbnail-slider .arrow {
   background: none;
   border: none;
@@ -426,6 +403,129 @@ h4 {
   margin-top: 10px;
 }
 
+nav {
+  flex-grow: 1;
+}
+
+nav ul.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 메인 메뉴 링크 기본 스타일 */
+.nav-menu>li>a {
+  text-decoration: none;
+  color: #333;
+  font-size: 19px;
+  padding: 10px 0;
+  white-space: nowrap;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+/* 메인 메뉴 호버 시 */
+.nav-menu>li>a:hover {
+  color: #c6093b;
+}
+
+/* 드롭다운 부모 요소 */
+.nav-menu .dropdown {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* 드롭다운 부모 요소의 하단 빨간 줄 (강조 효과) */
+.nav-menu .dropdown>a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+/* fixed-header에 마우스 호버 시 모든 드롭다운 항목의 밑줄이 확장 */
+.fixed-header:hover .nav-menu .dropdown>a::after {
+  width: 100%;
+}
+
+/* --- 서브메뉴 전체를 감싸는 컨테이너 (실제 드롭다운 영역) --- */
+.submenu-container {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  position: fixed;
+  top: 165px;
+  left: 0;
+  width: 100vw;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 30px 0px;
+  z-index: 990;
+  border-top: 3px solid #c6093b;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: nowrap;
+}
+
+/* fixed-header에 마우스 호버 시 모든 submenu-container를 보이게 합니다. */
+.fixed-header:hover .submenu-container {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 각 서브메뉴 열 (ul 요소) */
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  min-width: 150px;
+  text-align: left;
+}
+
+/* 서브메뉴 각 항목 */
+.submenu li {
+  margin-bottom: 8px;
+}
+
+.submenu li:last-child {
+  margin-bottom: 0;
+}
+
+/* 서브메뉴 각 항목의 링크 */
+.submenu li a {
+  color: #000;
+  padding: 5px 0;
+  display: block;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+/* 서브메뉴 항목 호버 시 */
+.submenu li a:hover {
+  color: #c6093b;
+}
+
+/* 검색, 메뉴, 장바구니 아이콘 */
+.nav-menu li img {
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.nav-menu li a:hover img {
+  transform: scale(1.1);
+}
+
 .download-buttons button {
   padding: 10px 20px;
   background: white;
@@ -446,7 +546,7 @@ h4 {
 
 .list-btn button {
   padding: 12px 40px;
-  background: #be1e2d;
+  background: #a30000;
   color: white;
   border: none;
   font-weight: bold;
@@ -460,10 +560,8 @@ h4 {
 }
 
 .main-image {
-
   height: auto;
 }
-
 
 .arrow {
   background: none;
@@ -475,7 +573,6 @@ h4 {
 
 .thumbnail-slider {
   display: flex;
-
   justify-content: center;
   margin-top: 30px;
   gap: 10px;
@@ -494,16 +591,11 @@ h4 {
   width: 80px;
   height: 80px;
   object-fit: contain;
-  /* 이미지 비율 유지하며 박스 안에 맞춤 */
   border: 1px solid #ccc;
-
-  /* 이미지가 작을 경우 배경 채우기 */
   padding: 5px;
-  /* 여백이 생기면 보완해줌 */
   cursor: pointer;
   transition: 0.3s;
 }
-
 
 .thumbnails img:hover {
   border: 2px solid #be1e2d;
@@ -533,7 +625,6 @@ h4 {
   width: 80%;
   max-width: 400px;
   margin-bottom: 20px;
-
 }
 
 /* 오른쪽 설명 영역 */
@@ -569,7 +660,6 @@ h4 {
 .category.active {
   color: white;
   background-color: #c6093b;
-  /* 빨간색 배경 */
   font-weight: bold;
 }
 
@@ -588,7 +678,6 @@ h4 {
   width: 50px;
   height: 4px;
   background-color: #c8102e;
-  /* 빨간 밑줄 */
   margin-bottom: 10px;
 }
 
@@ -601,9 +690,7 @@ h4 {
 .how {
   display: flex;
   justify-content: center;
-  /* 수평 중앙 정렬 */
   margin-top: 50px;
-  /* 위와의 간격 */
 }
 
 .how img {
@@ -628,11 +715,21 @@ h4 {
   right: 20px;
   font-size: 24px;
   position: relative;
-  /* 위치 기준 잡기 */
   display: inline-block;
-  /* 크기 영역 확보 */
 }
 
 .product {
   margin: 20px;
+}
+
+.product-extra .list-btn .list-button {
+
+  padding: 12px 40px;
+  background: #a30000;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+
 }
