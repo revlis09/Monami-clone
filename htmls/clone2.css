@@ -99,6 +99,19 @@ h1 .red {
   width: auto;
 }
 
+.logo a {
+  text-decoration: none;
+  /* 밑줄 제거 */
+  color: inherit;
+  /* 부모 요소의 색상 상속 (여기서는 이미지라 크게 상관 없음) */
+  display: block;
+  /* a 태그가 이미지 크기만큼 클릭 영역을 가지도록 함 */
+}
+
+/* 추가적으로 로고 이미지 자체에 마우스 오버 시 커서 모양을 pointer로 변경하여 클릭 가능함을 나타낼 수 있습니다. */
+.logo img {
+  cursor: pointer;
+}
 
 .nav-menu {
   display: flex;
@@ -271,6 +284,14 @@ h3 {
 
 .color-box.red {
   background: #d42a4e;
+}
+
+.color-box.maroon {
+  background: maroon;
+}
+
+.color-box.linen {
+  background: linen;
 }
 
 .color-box.blue {
@@ -588,4 +609,30 @@ h4 {
 .how img {
   max-width: 100%;
   height: auto;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.cart-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  position: relative;
+  /* 위치 기준 잡기 */
+  display: inline-block;
+  /* 크기 영역 확보 */
+}
+
+.product {
+  margin: 20px;
 }

@@ -32,7 +32,8 @@
       <hr />
       <div class="container">
         <h1 class="logo">
-          <img src="../images/logo.jpg" alt="모나미 로고" />
+          <a href="clone.html"><img src="../images/logo.jpg" alt="모나미 로고" />
+          </a>
         </h1>
         <nav>
           <ul class="nav-menu">
@@ -56,7 +57,11 @@
             <li><a href="#">기업 구매 / 개발</a></li>
             <li><a href="#"><img src="../images/search1.png" alt="검색" style="height: 18px;" /></a></li>
             <li><a href="#"><img src="../images/menu.jpg" alt="메뉴" style="height: 22px;" /></a></li>
-          </ul>
+            <li>
+              <a href="#" style="position: relative; display: inline-block;">
+                <img src="../images/cart.png" alt="장바구니" style="height: 22px;" />
+                <span id="cart-count" class="badge">0</span> </a>
+            </li>
         </nav>
       </div>
     </div>
@@ -140,6 +145,10 @@
     <section class="product-extra">
       <div class="list-btn">
         <button>LIST</button>
+      </div>
+      <div class="list-btn">
+        <button onclick="increaseCartCount()">Cart</button>
+      </div>
       </div>
     </section>
   </section>

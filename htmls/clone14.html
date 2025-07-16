@@ -32,7 +32,8 @@
       <hr />
       <div class="container">
         <h1 class="logo">
-          <img src="../images/logo.jpg" alt="모나미 로고" />
+          <a href="clone.html"><img src="../images/logo.jpg" alt="모나미 로고" />
+          </a>
         </h1>
         <nav>
           <ul class="nav-menu">
@@ -56,6 +57,11 @@
             <li><a href="#">기업 구매 / 개발</a></li>
             <li><a href="#"><img src="../images/search1.png" alt="검색" style="height: 18px;" /></a></li>
             <li><a href="#"><img src="../images/menu.jpg" alt="메뉴" style="height: 22px;" /></a></li>
+            <li>
+              <a href="#" style="position: relative; display: inline-block;">
+                <img src="../images/cart.png" alt="장바구니" style="height: 22px;" />
+                <span id="cart-count" class="badge">0</span> </a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -92,15 +98,19 @@
 
       <div class="product-right">
         <div class="product-title-area">
-          <h2 class="product-name">153 아이디 샤프</h2>
+          <h2 class="product-name">153 네오</h2>
           <div class="product-line"></div>
           <p class="product-category">프리미엄펜</p>
         </div>
 
         <h3 class="info-title">■ KEY FEATURES</h3>
         <ul class="features">
-          <li>153 볼펜의 Identity를 유지한 메탈 소재의 고급 샤프</li>
-          <li>선명한 색상과 매끈한 유광 바디의 세련된 디자인</li>
+          <li>러풀한 바디 색상으로 개성을 표현할 수 있는 Fashion Item</li>
+          <li>휴대가 편리한 세련된 클립의 트렌디한 디자인
+          </li>
+          <li>상단 헤드를 돌리면 심이 유출되는 트위스트 방식
+          </li>
+          <li>0.7mm 고급 금속심을 적용하여 부드럽고 깔끔한 필기 가능</li>
         </ul>
 
         <h3 class="info-title">■ INK COLOR</h3>
@@ -110,15 +120,17 @@
 
         <h3 class="info-title">■ BODY COLOR</h3>
         <div class="body-colors">
-          <div class="color-box" style="background:orangered;"></div>
-          <div class="color-box" style="background:rgb(189, 171, 138);"></div>
           <div class="color-box" style="background:navy;"></div>
+          <div class="color-box" style="background:rgb(143, 143, 165);"></div>
+          <div class="color-box" style="background:orangered;"></div>
+          <div class="color-box" style="background:rgb(255, 225, 0);"></div>
+          <div class="color-box" style="background:mediumspringgreen;"></div>
         </div>
 
 
         <div class="extra-info">
           <h3>■ POINT SIZE</h3>
-          <p>0.5mm</p>
+          <p>0.7mm</p>
         </div>
 
 
@@ -137,6 +149,9 @@
     <section class="product-extra">
       <div class="list-btn">
         <button>LIST</button>
+      </div>
+      <div class="list-btn">
+        <button onclick="increaseCartCount()">Cart</button>
       </div>
     </section>
   </section>

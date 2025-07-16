@@ -40,41 +40,100 @@
       </div>
       <hr />
 
-      <!-- Header -->
-
       <div class="container">
         <h1 class="logo">
-          <img src="../images/logo.jpg" alt="모나미 로고" />
+          <a href="index.html"><img src="../images/logo.jpg" alt="모나미 로고" />
+          </a>
         </h1>
         <nav>
           <ul class="nav-menu">
-            <li class="dropdown"><a>모나미소개</a>
-              <ul class="submenu">
-                <li><a href="#">회사소개</a></li>
-                <li><a href="#">CEO 인사말</a></li>
-                <li><a href="#">연혁</a></li>
-              </ul>
+            <li class="dropdown">
+              <a href="#">모나미소개</a>
+              <div class="submenu-container">
+                <ul class="submenu">
+                  <li><a href="#">CEO 메시지</a></li>
+                  <li><a href="#">회사정보</a></li>
+                  <li><a href="#">회사연혁</a></li>
+                  <li><a href="#">윤리경영</a></li>
+                  <li><a href="#">투자정보</a></li>
+                  <li><a href="#">CI</a></li>
+                </ul>
+                <ul class="submenu">
+                  <li><a href="#">찾아오시는 길</a></li>
+                  <li><a href="#">안전보건 경영방침</a></li>
+                </ul>
+              </div>
             </li>
-            <li class="dropdown"><a href="#">모나미제품</a>
-              <ul class="submenu">
-                <li><a href="#">펜/펜슬</a></li>
-                <li><a href="#">마카/컬러링</a></li>
-                <li><a href="#">노트/사무용품</a></li>
-              </ul>
+
+            <li class="dropdown">
+              <a href="#">모나미제품</a>
+              <div class="submenu-container">
+                <ul class="submenu">
+                  <li><a href="#">프리미엄 펜</a></li>
+                  <li><a href="#">펜/펜슬</a></li>
+                  <li><a href="#">마카/컬러링</a></li>
+                  <li><a href="#">노트/사무용품</a></li>
+                  <li><a href="#">잉크/리필</a></li>
+                  <li><a href="#">카탈로그</a></li>
+                </ul>
+              </div>
             </li>
-            <li><a href="#">NEWS & VIDEO</a></li>
-            <li><a href="#">모나미 미술대회</a></li>
-            <li><a href="#">고객지원</a></li>
-            <li><a href="#">기업 구매 / 개발</a></li>
+
+            <li class="dropdown">
+              <a href="#">NEWS & VIDEO</a>
+              <div class="submenu-container">
+                <ul class="submenu">
+                  <li><a href="#">보도자료</a></li>
+                  <li><a href="#">동영상자료</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">모나미 미술대회</a>
+              <div class="submenu-container">
+                <ul class="submenu">
+                  <li><a href="#">미술대회 소개</a></li>
+                  <li><a href="#">수상작 발표</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">고객지원</a>
+              <div class="submenu-container">
+                <ul class="submenu">
+                  <li><a href="#">자주묻는질문</a></li>
+                  <li><a href="#">문의하기</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">기업 구매 / 개발</a>
+              <div class="submenu-container">
+                <ul class="submenu">
+                  <li><a href="#">대량 구매 문의</a></li>
+                  <li><a href="#">기업 및 단체 구매</a></li>
+                  <li><a href="#">산업용 맞춤 제품개발</a></li>
+                </ul>
+              </div>
+            </li>
+
             <li><a href="#"><img src="../images/search1.png" alt="검색" style="height: 18px;" /></a></li>
-            <li><a href="#"><img src="../images/menu.jpg" alt="메뉴" style="height: 22px;" /></a></li>
+            <li><a href="#"><img src="../images/menu.jpg" alt="메뉴" style="height: 18px;" /></a></li>
+            <li>
+              <a href="#" style="position: relative; display: inline-block;">
+                <img src="../images/cart.png" alt="장바구니" style="height: 22px;" />
+                <span id="cart-count" class="badge">0</span>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
   </header>
 
 
-  <!-- Hero Image -->
   </div>
   <img class="hero-image" src="../images/banner1.jpg" alt="메인 배너 이미지" style="margin-top: 180px;" />
 
@@ -233,22 +292,24 @@
         </a>
       </div>
 
-
       <div class="product-card">
-        <img src="../images/pen11.png" alt="153 볼펜" />
-        <div class="product-info">
-          <h5>프리미엄펜</h5>
-          <p>153 네오</p>
-
-        </div>
+        <a href="clone14.html">
+          <img src="../images/pen11.png" alt="153 볼펜" />
+          <div class="product-info">
+            <h5>프리미엄펜</h5>
+            <p>153 네오</p>
+          </div>
+        </a>
       </div>
-      <div class="product-card">
-        <img src="../images/pen12.png" alt="153 볼펜" />
-        <div class="product-info">
-          <h5>프리미엄펜</h5>
-          <p>153 리스펙트</p>
 
-        </div>
+      <div class="product-card">
+        <a href="clone15.html">
+          <img src="../images/pen12.png" alt="153 볼펜" />
+          <div class="product-info">
+            <h5>프리미엄펜</h5>
+            <p>153 리스펙트</p>
+          </div>
+        </a>
       </div>
 
     </div>
@@ -310,7 +371,7 @@
       </div>
     </div>
   </footer>
-  <script src="clone.js"></script>
+  <script src="clone2.js"></script>
 </body>
 
 </html>

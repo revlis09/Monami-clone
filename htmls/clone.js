@@ -45,3 +45,29 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(video);
+
+// --- 여기부터 장바구니 관련 수정 부분 ---
+
+// 1. 페이지 로드 시 localStorage에서 'cartCount' 값을 가져와 cartTotal 초기화
+//    만약 localStorage에 값이 없다면 0으로 초기화합니다.
+let cartTotal = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;
+
+// 2. DOM이 완전히 로드된 후, 초기 cartTotal 값을 화면의 뱃지에 표시
+document.addEventListener('DOMContentLoaded', () => {
+  const badge = document.getElementById('cart-count');
+  if (badge) {
+    badge.textContent = cartTotal;
+  }
+});
+
+// 3. 'Cart' 버튼이 클릭될 때 호출될 함수: 장바구니 개수를 0으로 초기화
+function resetCartCount() {
+  cartTotal = 0; // 장바구니 총 개수를 0으로 설정
+  localStorage.setItem('cartCount', cartTotal); // localStorage에도 0으로 저장
+
+  const badge = document.getElementById('cart-count');
+  if (badge) {
+    badge.textContent = cartTotal; // 화면에 0으로 업데이트
+  }
+}
+// --- 장바구니 관련 수정 부분 끝 ---
